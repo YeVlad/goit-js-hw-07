@@ -14,7 +14,7 @@ buttonDestroy.addEventListener('click', destroyBoxes);
 
 function createDiv(event) {
   const amount = inputNumber.value;
-  if (amount >= 1 && amount <= 100) {
+  if (amount >= Number(inputNumber.min) && amount <= Number(inputNumber.max)) {
     destroyBoxes();
     for (let i = 0; i < amount; i++) {
       const color = `${getRandomHexColor()}`;
